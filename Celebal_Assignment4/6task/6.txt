@@ -1,0 +1,16 @@
+Task: Create a Custom Docker Bridge Network
+
+Steps:
+1.Check Existing Docker Networks
+  docker network ls
+2.Create a Custom Bridge Network
+  docker network create --driver bridge mycustomnetwork
+3.Verify the Network
+  docker network inspect mycustomnetwork
+4.Run Containers in the Custom Network
+  docker run -dit --name container1 --network mycustomnetwork ubuntu
+  docker run -dit --name container2 --network mycustomnetwork ubuntu
+5.Test Communication Between Containers
+  docker exec -it container1 bash
+  ping container2
+

@@ -1,0 +1,34 @@
+Task: Docker Registry, DockerHub, Create a Multi-Stage Build
+
+Steps:
+1.Install and Set Up Docker
+  Install Docker Desktop or Docker Engine.
+  Verify installation using docker --version.
+2.Login to DockerHub
+  Create an account at hub.docker.com.
+  Use docker login to authenticate from the command line.
+3.Pull an Image from DockerHub
+   Use docker pull <image-name> to download a public image like nginx or ubuntu.
+4.Create a Sample Application
+  Prepare a simple project (e.g., a Node.js or static HTML app) that will be containerized.
+5.Write a Multi-Stage Dockerfile
+  Stage 1: Use a base image (like node) to build the app.
+  Stage 2: Use a lightweight image (like nginx) to serve the built files.
+  Use COPY --from=builder to move build artifacts from one stage to another.
+6.Build the Docker Image
+   Use docker build -t <image-name> . in the project directory.
+7.Run the Container Locally
+
+  Use docker run -p <host-port>:<container-port> <image-name> to test the image.
+
+8.Tag the Image for DockerHub
+
+  Use docker tag <image-name> <username>/<repository-name> to prepare for push.
+
+9.Push the Image to DockerHub
+
+  Use docker push <username>/<repository-name> to upload the image.
+
+10.Verify on DockerHub
+
+  Visit your DockerHub account to confirm the image was uploaded successfully.

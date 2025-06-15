@@ -1,0 +1,43 @@
+Task: Docker Compose for Multi-Container Applications, Docker Security Best Practices
+
+Part 1: Docker Compose for Multi-Container Applications
+1.Created a Project Directory
+  Set up folders for app code and Dockerfiles for different services (e.g., backend, frontend, database).
+2.Wrote docker-compose.yml File
+  Defined services such as:
+  web: used a custom Dockerfile
+  db: used an official image like mysql
+  Specified ports, volumes, and environment variables.
+3.Started All Services Together
+  docker-compose up
+4.Verified Containers Are Running
+  docker ps
+5.Stopped and Removed Containers
+  docker-compose down
+
+Part 2: Docker Security Best Practices
+
+1.Used Official and Minimal Base Images
+
+  Chose images like alpine or debian-slim for smaller attack surfaces.
+
+2.Avoided Running Containers as Root
+
+  Used USER directive in Dockerfile to define a non-root user.
+
+3.Set Resource Limits
+
+  Used flags like --memory and --cpus to restrict resource usage.
+
+4.Used .dockerignore File
+
+  Prevented sensitive or unnecessary files from being added to images.
+
+5.Scanned Images for Vulnerabilities
+
+  Used tools like docker scan or external scanners.
+
+6.Kept Images and Docker Version Updated
+
+  Regularly pulled updated images and installed Docker security patches.
+

@@ -1,0 +1,31 @@
+Task: Docker Installation, Basic Container Operations & Building Image from Dockerfile
+
+Docker is a containerization tool that allows you to package applications and their dependencies into containers. This task focuses on installing Docker, performing basic container operations, and learning how to build a custom Docker image using a Dockerfile.
+
+Steps:
+1.Installed Docker on My System
+  Downloaded Docker Desktop and installed it.
+  Verified installation using:
+  docker --version
+2.Pulled a Base Image
+  Used Docker Hub to pull an Ubuntu image:
+  docker pull ubuntu
+3.Ran a Container from the Image
+  Started an interactive Ubuntu container to explore its environment
+4.Executed Basic Commands Inside the Container
+  Ran Linux commands like ls, pwd, and apt update inside the container to check functionality.
+5.Checked Running and All Containers
+  Listed running containers:
+  docker ps
+  Listed all containers (including stopped ones):
+  docker ps -a
+6.Stopped and Removed Unused Containers
+7.Created a Dockerfile
+  vim Dockerfile
+8.Built a Custom Image
+   Built the image from Dockerfile
+9.Ran Container from Custom Image
+  Ran the custom image to verify the Dockerfile worked
+
+
+  

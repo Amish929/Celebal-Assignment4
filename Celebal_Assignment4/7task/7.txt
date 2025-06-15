@@ -1,0 +1,17 @@
+Task: Create a Docker Volume and Mount It to a Container
+
+Steps:
+1.Create a Docker Volume
+  docker volume create myvolume
+2.Verify the Volume
+  docker volume ls
+3.Run a Container with the Volume Mounted
+  docker run -dit --name volcontainer -v myvolume:/app ubuntu
+4.Add Data to the Volume
+  docker exec -it volcontainer bash
+  Created a file inside /app (the mount path).
+5.Check Volume Persistence
+  Stopped and removed the container, then re-attached the same volume to a new one.
+  Verified that data in /app still existed, proving volume persistence.
+6.Inspect Volume (Optional)
+  docker volume inspect myvolume

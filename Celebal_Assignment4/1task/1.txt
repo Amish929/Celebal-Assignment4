@@ -1,0 +1,26 @@
+Task: Introduction to Containerization and Docker Fundamentals
+
+Containerization allows applications to run in isolated environments with all dependencies bundled together. Docker is a widely used tool that simplifies container creation, deployment, and management. It ensures consistency across development, testing, and production environments.
+
+
+Steps:
+1.Install Docker
+   Installed Docker Desktop and verified installation using docker --version.
+2.Pull an Image
+   Pulled a sample image like hello-world from Docker Hub.
+3.Run a Container
+   Ran the image to check if Docker was working properly.
+4.Check Running Containers
+   Used docker ps to see active containers.
+5.View All Containers
+   Listed all containers (including stopped ones).
+6.Stop and Remove Containers
+  Stopped and removed unused containers for cleanup.
+7.Remove Images
+  Deleted images no longer needed to save space.
+8.Run Ubuntu in Interactive Mode
+  Started an Ubuntu container and accessed its terminal.
+9.Execute Basic Linux Commands
+   	Inside the container, ran simple commands like ls, pwd.
+10.Exit Container
+   	Exited the interactive session and returned to the host system.

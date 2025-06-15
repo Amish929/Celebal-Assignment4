@@ -1,0 +1,30 @@
+Task: Create a Docker Image from Multiple Methods (Dockerfile & Running Container)
+Steps:
+🔹 Method 1: Create Image Using Dockerfile
+1.Create a Project Directory
+
+   Added application code (e.g., HTML, Node.js, or Python app).
+
+2.Write a Dockerfile
+
+  Defined base image (e.g., FROM node), copied files, and added commands to install and run the app.
+3.Build the Image
+   docker build -t myapp-image .
+4.Run the Image
+  docker run -p 8080:80 myapp-image
+
+🔹 Method 2: Create Image from a Running Container
+1.Run a Base Container
+  Started an interactive container from an image like Ubuntu
+2.Made Changes Inside the Container
+   Installed packages or created files manually using Linux commands.
+
+3.Exited the Container
+   Used exit to stop and return to host.
+
+4.Committed the Container to an Image
+   Saved the running container as a new image
+
+5.Used the New Image
+   Verified by running:
+   docker run -it custom-image

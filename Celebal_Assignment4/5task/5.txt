@@ -1,0 +1,31 @@
+Task: Push and Pull Image to DockerHub and ACR
+
+🔹 Part 1: Push & Pull Image with Docker Hub
+1.Login to Docker Hub
+  Run:
+  docker login
+2.Tag the Image
+   Tag the local image with your Docker Hub username:
+    docker tag myimage username/myimage
+3.Push the Image to Docker Hub
+   Use:
+    docker push username/myimage
+4.Pull the Image on Any System
+  docker pull username/myimage
+🔹 Part 2: Push & Pull Image with Azure Container Registry (ACR)
+
+1.Login to Azure CLI
+  Run:az login
+2.Create an Azure Container Registry (if not already created)
+  az acr create --resource-group myResourceGroup --name myregistry --sku Basic
+3.Login to ACR
+  az acr login --name myregistry
+4.Tag the Image for ACR
+  docker tag myimage myregistry.azurecr.io/myimage
+5.Push the Image to ACR
+  docker push myregistry.azurecr.io/myimage
+6.Pull the Image from ACR
+  docker pull myregistry.azurecr.io/myimage
+
+
+
